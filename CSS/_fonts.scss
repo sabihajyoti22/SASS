@@ -1,0 +1,4 @@
+@mixin font-style($color) {
+    color: $color;
+    font-family: 'Times New Roman', Times, serif;
+}

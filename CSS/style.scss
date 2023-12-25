@@ -1,0 +1,27 @@
+@import 'fonts';
+
+$colors:(
+    "primary" : #383CC1,
+    "accent" : #FF6666,
+);
+
+@function color($color){
+    @return map-get($map: $colors, $key: $color)
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        clip-path: polygon(75% 0, 100% 38%, 82% 100%, 18% 100%, 0 0);
+        height: 100vh;
+        width: 50%;
+        background-color: color("primary");
+        text-align: center;
+        h3{
+            @include font-style(color('accent'));
+        }
+    }
+}
